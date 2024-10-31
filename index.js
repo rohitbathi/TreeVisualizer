@@ -13,6 +13,7 @@ function buttonHandler(){
     if (canvas.getContext) {
         const board = canvas.getContext("2d");
         board.font = "28px serif";
+        board.clearRect(0, 0, canvas.width, canvas.height);
 
         let treeR = genTree()
         console.log(treeR);
@@ -97,13 +98,13 @@ function genTree(){
     rootNode.right = new CustomTreeNode(nodeVal=3)
     temp = rootNode.right
     temp.left = new CustomTreeNode(nodeVal=4)
-    temp.right = new CustomTreeNode(nodeVal=5)
-    temp = temp.left
-    temp.left = new CustomTreeNode(nodeVal=6)
-    temp.right = new CustomTreeNode(nodeVal=7)
-    temp = rootNode.left
-    temp.left = new CustomTreeNode(nodeVal=8)
-    temp.right = new CustomTreeNode(nodeVal=9)
+    // temp.right = new CustomTreeNode(nodeVal=5)
+    // temp = temp.left
+    // temp.left = new CustomTreeNode(nodeVal=6)
+    // temp.right = new CustomTreeNode(nodeVal=7)
+    // temp = rootNode.left
+    // temp.left = new CustomTreeNode(nodeVal=8)
+    // temp.right = new CustomTreeNode(nodeVal=9)
     
     return rootNode
 }
@@ -125,3 +126,4 @@ function measureDepth(root, level){
 
 //     jsonString = '{}'
 // }
+

@@ -1,10 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 body{
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
+    margin-left: 2rem;
+}
+
+canvas{
+    background-color: white;
+}
+
+h1{
+    margin: 2rem 0 0.2rem 2rem;
+    text-decoration: underline 0.2rem;
+}
+
+h2{
+    margin: 1rem 2rem;
+    font-style: italic;
+}
+
+.wrapper{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.child-wrapper{
+    /* text-align: center; */
+    width: 50%;
+    overflow: scroll;
+}
+
+textarea{
+    width: 70%;
+    height: 15rem;
+}
+
+button{
+    width: fit-content;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0.3rem 0.3rem;
+}
+
+#purpose{
+    font-weight: 300;
+}
+
+pre{
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    color: black;
+    background: lightgray;
+    padding: 0 2rem;
+    /* font-style: italic; */
+    width: fit-content;
+    border: 0.1rem solid darkgray;
+    border-radius: 1rem;
+    /* margin-right: 5rem; */
+}
+
+img{
+    width: fit-content;
+    height: fit-content;
+    /* margin-top: 5rem; */
+    background-color: white;
 }

@@ -8,17 +8,69 @@
 </head>
 <body>
     <h1>Tree Visualizer</h1>
-    <h2>A visualizer for binary tree</h2>
-
-    <p>
-        A one-page application for visualizing any tree.
+    <!-- <h3>A visualizer for binary tree</h3> -->
+    <p id="purpose">
+        A one-page application for visualizing any binary tree.
     </p>
-    <textarea name="tree-json" id="tree-json"></textarea>
-    <button
-    onclick="buttonHandler()">Generate tree</button>
-    <canvas id="viz-board">
-        
-    </canvas>
+    <div class="wrapper">
+        <div class="child-wrapper">
+            <div>
+                <textarea name="tree-json" id="tree-json"></textarea>
+            </div>
+            <button
+            onclick="buttonHandler()">Generate tree</button>
+        </div>
+        <div class="child-wrapper">
+            <canvas id="viz-board">
+                
+            </canvas>
+        </div>
+    </div>
+    <h2>How to use</h2>
+    <p>
+        <ul>
+            <li>
+                Convert your tree object into a JSON string and copy the string.
+            </li>
+            <li>
+                Paste the string in the above textarea and hit the generate button.
+            </li>
+            <li>
+                If all the data you passed is correct, you will see the converted tree on the right.
+            </li>
+        </ul>
+    </p>
+    <h2>
+        JSON string format.
+    </h2>
+    <p>
+        The JSON string must be like the example given below to ensure that the input binary tree
+        is read correctly.
+    </p>
+    <div class="wrapper">
+        <pre>
+<code>
+{
+    "nodeVal": 1,
+    "left": {
+        "nodeVal": 2,
+        "left": null,
+        "right": null
+    },
+    "right": {
+        "nodeVal": 3,
+        "left": {
+        "nodeVal": 4,
+        "left": null,
+        "right": null
+        },
+        "right": null
+    }
+}
+</code>
+        </pre>
+        <img src="./images/example-tree.png" alt="example-tree">
+    </div>
     <script defer src="index.js"></script>
 </body>
 </html>
